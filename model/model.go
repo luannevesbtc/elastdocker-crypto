@@ -1,12 +1,13 @@
 package model
 
+//Passengers Model
 type Passengers struct {
 	TotalPassengers int `json:"totalPassengers"`
 	TotalPages      int `json:"totalPages"`
 	Data            []struct {
-		ID      string `json:"_id"`
-		Name    string `json:"name"`
-		Trips   int    `json:"trips"`
+		ID      string      `json:"_id"`
+		Name    string      `json:"name"`
+		Trips   interface{} `json:"trips"`
 		Airline []struct {
 			ID          int    `json:"id"`
 			Name        string `json:"name"`
